@@ -1,0 +1,11 @@
+# ignore folders
+/mcmcstat
+
+#
+scripts/.ipynb_checkpoints/
+
+# system files
+.DS_Store
+
+.DS_Store
+scripts/*.asv
