@@ -205,7 +205,7 @@ set(gca,'Fontsize',20);
 
 subplot(5,2,9)
 histogram(s2chain(burn:end),'DisplayStyle','stairs','Normalization','pdf','EdgeColor','b','LineWidth',2);
-xlabel('\simga_{LL}');
+xlabel('\sigma_{LL}');
 ylabel('PDF');
 set(gca,'fontname','times');
 set(gca,'Fontsize',20);
@@ -214,7 +214,7 @@ set(gca,'Fontsize',20);
 
 subplot(5,2,10)
 plot(s2chain(burn:end),'Color','b','LineWidth',2);
-ylabel('\simga_{LL}');
+ylabel('\sigma_{LL}');
 xlabel('PDF');
 set(gca,'fontname','times');
 set(gca,'Fontsize',20);
