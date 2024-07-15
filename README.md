@@ -37,6 +37,12 @@ Once you have cloned the repository you can look at a simple example of modeling
   </picture>
 </p>
 
+<p align="center">
+  <picture>
+    <img src="figures/dram_logt_1_logN_1_posterior.png" alt="demo-example-posterior"/>
+  </picture>
+</p>
+
 ### Comparing between adaptation steps:
 How to tune the adaptation step of a Delayed rejection?
 TO DO
@@ -47,5 +53,5 @@ TO DO
 
 ## Contributions.
 - Current contributions by [Raunak Dey](https://sites.google.com/view/raunak-dey/home) at UMD.
-- Part of the big-project led by [David Talmy](https://eeb.utk.edu/people/david-talmy/).
+- Part of the big-project led by [David Talmy](https://eeb.utk.edu/people/david-talmy/) at UTK.
 - Please feel free to reach out to me at my [email](mailto:rdey@umd.com?subject=[matlab-bayesian-ode-github])

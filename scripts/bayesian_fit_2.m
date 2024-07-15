@@ -95,7 +95,7 @@ hold on;
 set(gca,'YScale','log');
 
 
-for i = 2500:10:5000
+for i =3000:10:5000
 
 i
 
@@ -132,3 +132,89 @@ ylabel('Cells');
 
 set(gca,'Fontsize',20);
 set(gca,'fontname','times');
+
+
+
+%% plot posteriors
+
+burn = 3000;
+
+figure(3)
+
+subplot(5,2,1)
+histogram(chain(burn:end,1),'DisplayStyle','stairs','Normalization','pdf','EdgeColor','b','LineWidth',2);
+xlabel('\mu max');
+ylabel('PDF');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+subplot(5,2,2)
+plot(chain(burn:end,1),'Color','b','LineWidth',2);
+ylabel('\mu max');
+xlabel('trace');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+
+
+subplot(5,2,3)
+histogram(chain(burn:end,2),'DisplayStyle','stairs','Normalization','pdf','EdgeColor','b','LineWidth',2);
+xlabel('K_s');
+ylabel('PDF');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+subplot(5,2,4)
+plot(chain(burn:end,2),'Color','b','LineWidth',2);
+ylabel('K_s');
+xlabel('trace');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+
+
+subplot(5,2,5)
+histogram(10.^chain(burn:end,3),'DisplayStyle','stairs','Normalization','pdf','EdgeColor','b','LineWidth',2);
+xlabel('Q_n');
+ylabel('PDF');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+
+subplot(5,2,6)
+plot(10.^chain(burn:end,3),'Color','b','LineWidth',2);
+ylabel('Q_n');
+xlabel('trace');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+subplot(5,2,7)
+histogram(10.^chain(burn:end,4),'DisplayStyle','stairs','Normalization','pdf','EdgeColor','b','LineWidth',2);
+xlabel('N0');
+ylabel('PDF');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+subplot(5,2,8)
+plot(10.^chain(burn:end,4),'Color','b','LineWidth',2);
+ylabel('N_0');
+xlabel('trace');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+
+subplot(5,2,9)
+histogram(s2chain(burn:end),'DisplayStyle','stairs','Normalization','pdf','EdgeColor','b','LineWidth',2);
+xlabel('\simga_{LL}');
+ylabel('PDF');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
+
+
+
+subplot(5,2,10)
+plot(s2chain(burn:end),'Color','b','LineWidth',2);
+ylabel('\simga_{LL}');
+xlabel('PDF');
+set(gca,'fontname','times');
+set(gca,'Fontsize',20);
