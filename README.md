@@ -39,7 +39,7 @@ Once you have cloned the repository you can look at a simple example of modeling
 
 <p align="center">
   <picture>
-    <img src="figures/dram_logt_1_logN_1_posterior.png" alt="demo-example-posterior"/>
+    <img src="figures/dram_logt_1_logN_1_trace.png" alt="demo-example-posterior"/>
   </picture>
 </p>
 
@@ -50,6 +50,22 @@ TO DO
 ### Data transformation/ reparametrization:
 - Should the data be log transformed?
 - Should some of the parameters be sampled in the log scale?
+
+### FAQ
+- Language and implementation: MAtlab -- mcmcstat -- very slow! But transparent!
+- ODE solver: ode45.
+- Error Model: inv-gamma; assumped independence of points, multiplicative likelihood, compared log(data)  with log(model)
+- Convergence tests: Gelman rubin, Autocorrelation of chains, geweke.
+- Post processing: burn = 3000 -- need burning for DRAM-MCMC, need atleast 10 chain thinning for.
+
+
+## Review:
+Here's the convention we used (for now).
+-  Initial condition fixed from data for P0 and varied for N0 
+- flags: Logtransformed = 1 means log(Data) and log(model) compared.
+- flags: Logprior = 1, LogNormal Priors used for N0 and Qs
+- You can find chains saved in [results](./results/)
+- You can find plots saved in [figures](./figures/)
 
 ## Contributions.
 - Current contributions by [Raunak Dey](https://sites.google.com/view/raunak-dey/home) at UMD.
